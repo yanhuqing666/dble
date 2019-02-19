@@ -10,6 +10,7 @@ import com.actiontech.dble.backend.mysql.PacketUtil;
 import com.actiontech.dble.config.Fields;
 import com.actiontech.dble.net.mysql.*;
 import com.actiontech.dble.server.ServerConnection;
+import com.actiontech.dble.server.parser.ServerParseSelect;
 import com.actiontech.dble.util.StringUtil;
 
 import java.nio.ByteBuffer;
@@ -27,12 +28,16 @@ public final class SelectUser {
     private static final EOFPacket EOF = new EOFPacket();
     private static final ErrorPacket ERROR = PacketUtil.getShutdown();
 
-    public static void response(ServerConnection c) {
+    public static void response(ServerConnection c, int type) {
         if (DbleServer.getInstance().isOnline()) {
 
             byte packetId = setCurrentPacket(c);
             HEADER.setPacketId(++packetId);
-            FIELDS[0] = PacketUtil.getField("USER()", Fields.FIELD_TYPE_VAR_STRING);
+            if (type == ServerParseSelect.USER) {
+                FIELDS[0] = PacketUtil.getField("USER()", Fields.FIELD_TYPE_VAR_STRING);
+            } else {
+                FIELDS[0] = PacketUtil.getField("CURRENT_USER()", Fields.FIELD_TYPE_VAR_STRING);
+            }
             FIELDS[0].setPacketId(++packetId);
             EOF.setPacketId(++packetId);
 
@@ -44,7 +49,11 @@ public final class SelectUser {
             buffer = EOF.write(buffer, c, true);
 
             RowDataPacket row = new RowDataPacket(FIELD_COUNT);
-            row.add(getUser(c));
+            if (type == ServerParseSelect.USER) {
+                row.add(getUser(c));
+            } else {
+                row.add(getCurrentUser(c));
+            }
             row.setPacketId(++packetId);
             buffer = row.write(buffer, c, true);
             EOFPacket lastEof = new EOFPacket();
@@ -61,6 +70,10 @@ public final class SelectUser {
 
     private static byte[] getUser(ServerConnection c) {
         return StringUtil.encode(c.getUser() + '@' + c.getHost(), c.getCharset().getResults());
+    }
+
+    private static byte[] getCurrentUser(ServerConnection c) {
+        return StringUtil.encode(c.getUser() + "@%", c.getCharset().getResults());
     }
 
     public static byte setCurrentPacket(ServerConnection c) {

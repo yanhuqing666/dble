@@ -28,8 +28,11 @@ public final class SelectHandler {
             case ServerParseSelect.DATABASE:
                 SelectDatabase.response(c);
                 break;
+            case ServerParseSelect.CURRENT_USER:
+                SelectUser.response(c, ServerParseSelect.CURRENT_USER);
+                break;
             case ServerParseSelect.USER:
-                SelectUser.response(c);
+                SelectUser.response(c, ServerParseSelect.USER);
                 break;
             case ServerParseSelect.VERSION:
                 SelectVersion.response(c);
