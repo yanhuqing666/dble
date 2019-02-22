@@ -6,7 +6,7 @@ addons:
   sonarcloud:
     organization: "yanhuqing666-github" # the key of the org you chose at step #3
     token:
-      secure: SONAR_TOKEN # encrypted value of your token
+       "Zfif8VBUrnjLkbVsv+30+D4svfLRekfX2F9saMTCPnB1JCMv6O6cu88lwDl+xc+N8n35/I34mWDka1iL8MIdEpMT2Nn3itziJpfOgehDTaCo5qRPgiBD18pgHoh7QS6YXMDQJ9cEIzKJgHzYqEi+C4YLSe2VpdQVVzcR+quLKT7ESNt+La+WIZVG/85jJIBmKI8JneNVlyQ4y47mun4BoMuEVrg6XgEPln1+c6J/nFa4PsFG1PDUlvMpzO8a5eoaKq7JPErYLkEZTP7K43cKNpj80t3FZymJIGXPUI4ZPxRJ8ochCb6LMEY7zoEiDUnfV22fjmg3t32t/f/4RO1/qmE549aZRQgmzH1qfrC7dVfKw6meUa5WLaBVhgkIP61UwAgh/Zgys0Wvb4P6hAS41rHELwp6d4xP0hgt6INLpr/F9yG55Z7NMtcJn7TzbWJvxjEQO43/lVrHlRj5CMri/Cu4n/idD3OyqcTAvUJz914tRd3foTPRdygNE2aOfRUyrPISSaUC2CuLQaM4DUi/Ev0A1y+LtNXfNQP/nzfpc+kRv+CYB2EJlat9Q1G0pCmN5PgYlCJVYdwJJwR5FYZyHfBxUkICRKyJuP8a1+21Xd4hjjrSt+J8tWYmCpUKaKLL+VYjuRTELEmWo87Fr+Wj12aUNq8FC/wbLYzcfAXvfFY="
 
 jdk:
   - openjdk8
