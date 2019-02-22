@@ -2,9 +2,9 @@ language: java
 
 addons:
   sonarcloud:
-    organization: "yanhuqing666-github" # the key of the org you chose at step  #3
+    organization: "$ORG_TOKEN" # the key of the org you chose at step  #3
     token:
-       secure: "${SONAR_TOKEN}"
+       secure: "frNEBOgRwOJppfsKpKozpyzU5SYJR8rmxVY8PiWfWQqK2CrMw6TDpHzxezfwS2b8v+5hLXpUZR5Waw9FhPLtRYx6OyhuTHIidPz89n0pRV09anLV9Oah+vskMsGbs89HiD61U+x1HCyLmu2gAmn2Lpj2W0I2J6C08B1P5ZyBtS8h51x74imMm2yZfEEBjL/gMKFDR7YaD5Pk04gg9NUCmOLLNW8hv3vQmzd3cJabj+9Jeb7X2wbEWur1X585nJEOMZ9ewHwT9GkuC+maFktpaVRmo0dEg7kYgQxL/VDKhueOh3dWAgkLuIh16fWgeN/nq5SGDGqtTLsnJlUOQOaZAzABD80+x1+GWPG12nfg9rvFqlIQWkNLS5dUhgkUW+71O+/J5LFhjt3LplLVo0/zIfAvSpqzglbkzsEz83ReVHMSXpUFX5Gimz96xkHoYLLUtGABjYcdyYwpLaw4Ea+521ifXwAss77mP3aGzYO3+QyDNHVNKLswPfpcJqRyvSVhYQfdthd6dngCN0E60StAQGGwKj/tk9BRPmtzs92DSnflQdp7DfR88s3Czz21FiWUVqbVV1Vpj8nNRG15qgGpAF6beX3tzg+OJv+r+uoZU6tGQfDW7Mo5l7Xz8YkFBQmNtnItGf5imWhonMerPeC8zlDdtuvkrin8ShvEk1dnnms="
 # travis encrypt -r yanhuqing666/dble --com xxxxx
 
 jdk:
