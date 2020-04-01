@@ -7,12 +7,11 @@ cache:
   - "$HOME/.m2/repository"
 deploy:
   provider: releases
-  user: yanhuqing666
+  api_key:
+    secure: NLL5ZmlxkuPJWAnctWawbCxl3/HP88U+LgvW5iNGi1603INb84g4ol32XeZaK9dBAo7vnweFBLhnLiv9jNm1yqiiFINKqXi4PIgscKYKbEI2X0rcYoStR2T+V6OEG0tEvNquuc+zMFi4mJLZN8MHeJ44zCq1XPeVEeL92ZctkBlR+057pFv158vH6M6WvTUUcGCmc+p+RuHMFcWEYVIbYaOyf8j0JOc2G6lGNmBG6zpmEsl/T/XwcI8EJlMLgZ/VETe3djbUWMK1ymSDEWa/iEsN/NXfnNrbXplOydO/7HkhvxNovKPaC0mushMzaDVmL2LjmFhDMloZCt4ZNctMofqLleDlDyzExDSvHVJ7+BrnC+e5h6MW+0fgu7j6Wr/ah/jlmtHfNOjMg9NIgMdq5nE/bASOWnYJGg5nOlTIr7GHW70NCItr4tH1jGJQkQa3Nbk9CLbYOn7o720fDiUtJugXcr92/cakTahq2OMJ3SVJsIbv/OqQaZHhvzFY7o9MtmQkBK5E5kBVNzsaBnx1jfEwOHTeo86yrScSPw/XVCBN1X1u7tEm6ryyqmgpek500M0/6dFBr8R9o8PM0ygDDjGm3P7n94zXrpvem5LoDX8O1wYt2xaovvh4W7g1BQuEtJhRenzeLPtSO9jibZHmphX/Op/tEUMnY4pPOL05+3c=
   file: target/*-linux.tar.gz
-  skip_cleanup: true
   on:
     tags: true
     jdk: openjdk8
   draft: true
-  password:
-    secure: UztTdJTf/wJ+q+c+gG3o895V06ZffoUG6iGKfsDbI+ZBwqsZ2Xb7QpEAOq6EbsFg1pTKDRQMnwmUM3f40OAhBHVnzhTuJXfrk2YwTXVnP4CIzFTWEZgCcjFklAvtCn/IuFrS67ipXvLMncxSq0TAebpetHBXe+BOttOKkrB4MRi5CYkMolO28d8/6qpk663cG6zpzeLdb5Bz6BY+U7eJv0w+Xt2daGvdwRzTRVa5RH9zWjnsJJ/PvWNl9OMRx+ZMqITAplJx/W6DNbTdlYrzDFoYFpCyNCFxJ1cAcibtvzf6oJiD5VAxtRbWi7hl5KWKtNxLEQVJTMNaZehtMof3CgHf3dGW7TjghVLTft00GWzhTAjEiicokEaZkEPCEta8qmBLAO4N3ja3RK4rnU5Df+Wt3AivOqYZCy0PI81uOcdwLZl9bV6JjYdALHaUJ/YW+9YnDhXDIsCCgQB4Cd+ndy7zUgSW1XJeWnjrTL0/8xpy6DKxrs316JFxLt5B9aWsd6LpG755uBs2QwNAwgcBsnMAj3cDVpS0AiFFca+G/3zIdbc2kA4j2egq3+X2Ky7oIGVfT4/i1sA7Kn/4fJkULWGsdYp3pq9J8hdrugPLPWh24ObA4OSuIccyo3gptc7m2d/moiKLeu6n5o8MjfNvmOqsC3b5dEsoEc3YRRtLbhk=
+  skip_cleanup: true
