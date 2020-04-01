@@ -20,3 +20,12 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.sonar/cache'
+deploy:
+  provider: releases
+  api_key:
+    secure: 2e88edfc3a3a938404abfeaac7bc5d009f93b884
+  file: target/*-linux.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
+  draft: true
